@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-sofiaPro;
+}
+
+.centered-container {
+  @apply mx-auto px-5 md:px-14 max-w-screen-xl;
+}
+
+.section {
+  @apply mt-8 mb-16;
+}
+
+.primaryCTA {
+  @apply text-white border border-white hover:bg-[#590008];
+}
+
+.secondaryCTA {
+  @apply border border-[#590008] text-[#590008] px-4 py-2 hover:bg-[#590008] hover:text-white
+}
