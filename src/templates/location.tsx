@@ -31,6 +31,9 @@ import {
 } from "@headlessui/react";
 import Schema from "../components/Schema";
 import StaticMap from "../components/static-map";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import PageLayout from "../components/page-layout";
 
 /**
  * Required when Knowledge Graph data is used for a template.
@@ -50,7 +53,7 @@ export const config: TemplateConfig = {
       "description",
       "hours",
       "slug",
-      "photoGallery",
+      // "photoGallery",
       // "c_primaryCTA",
       // "c_secondaryCTA",
       // "c_tertiaryCTA",
@@ -82,11 +85,11 @@ export const config: TemplateConfig = {
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {
-      entityTypes: ["site"],
+      entityTypes: ["location"],
     },
     // The entity language profiles that documents will be generated for.
     localization: {
-      locales: ["en"],
+      locales: ["en_GB"],
     },
   },
 };
@@ -155,12 +158,12 @@ const Location: Template<TemplateRenderProps> = ({ relativePrefixToRoot, path, d
   const {
     _site,
     name,
-    // address,
+    address,
     // openTime,
-    // hours,
-    // mainPhone,
-    // geocodedCoordinate,
-    // description,
+    hours,
+    mainPhone,
+    geocodedCoordinate,
+    description,
     // c_relatedOffers,
     // c_relatedPromotions,
     c_primaryCTA,
@@ -175,84 +178,10 @@ const Location: Template<TemplateRenderProps> = ({ relativePrefixToRoot, path, d
 
 
   return (
-    <>
+    <PageLayout _site={_site}>
       <Schema document={_data} />
 
 
-      {/* Main Header */}
-      <header
-        className="bg-[#862633] text-white p-6 font-semibold"
-        aria-label="Main"
-      >
-        <div className="mx-auto md:flex justify-between items-center">
-          <a href="#">
-            <img
-              src="https://jiffylube-assets1.imgix.net/img/jiffy-lube.svg?auto=format%2Ccompress&fit=max&ixlib=react-9.2.0&h=32&dpr=1&q=75"
-              alt="N Keystone Ave"
-              className="h-10 w-auto"
-            />
-          </a>
-          <nav aria-label="Main Navigation" className="hidden md:bock">
-            <ul className="flex space-x-4">
-              <li>
-                <a
-                  href="https://www.jiffylube.com/get-an-estimate/get-started"
-                  className="text-xl hover:underline"
-                >
-                  Get an Estimate
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.jiffylube.com/auto-services"
-                  className="text-xl hover:underline"
-                >
-                  Services
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.jiffylube.com/coupons"
-                  className="text-xl hover:underline"
-                >
-                  Coupons & Offers
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.jiffylube.com/resource-center"
-                  className="text-xl hover:underline"
-                >
-                  Tips In A Jiffy
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.jiffylube.com/contact"
-                  className="text-xl hover:underline"
-                >
-                  Contact Us
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="https://handandstone.com/book-an-appointment/"
-                  className="text-white cta2-white hover:underline !inline !font-semibold"
-                >
-                  Sign in / Create Account
-                </a>
-              </li>
-              <li>
-                <BsSearch
-                  className="!inline w-6 h-6 ml-6 font-semibold text-white"
-                  aria-label="Search Icon"
-                />
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
 
 
       {/* Top Account Bar */}
@@ -262,9 +191,9 @@ const Location: Template<TemplateRenderProps> = ({ relativePrefixToRoot, path, d
             href="https://www.jiffylube.com/locations/in/indianapolis/3328#"
             className="text-xl font-semibold px-4 py-2 bg-[#862633] text-white rounded transition-colors duration-300 border-2 border-transparent"
             style={{
-              '--hover-bg-color': '#FFFFFF',      // Hover background color
-              '--hover-border-color': '#FF5733',  // Hover border color
-              '--hover-text-color': '#862633'     // Hover text color
+              '--hover-bg-color': '#FFFFFF',
+              '--hover-border-color': '#FF5733',
+              '--hover-text-color': '#862633'
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.backgroundColor = 'var(--hover-bg-color)';
@@ -353,27 +282,15 @@ const Location: Template<TemplateRenderProps> = ({ relativePrefixToRoot, path, d
               </div>
             </div>
           </div>
-          <div className="relative lg:-mr-8 xl:absolute xl:inset-0 w-full md:w-1/2 flex justify-center items-center">
+          {/* <div className="relative lg:-mr-8 xl:absolute xl:inset-0 w-full md:w-1/2 flex justify-center items-center">
             <Image
               image={c_photo}
               className="w-[90%] !h-full max-w-[800px] object-cover"
             />
 
-          </div>
+          </div> */}
         </div>
       </section>
-
-
-
-
-
-
-
-
-
-
-
-
 
       {/* Welcome Section */}
       <section className="bg-[white] p-8 text-black">
@@ -496,7 +413,7 @@ const Location: Template<TemplateRenderProps> = ({ relativePrefixToRoot, path, d
 
 
       {/* FAQs Section */}
-      {c_relatedFAQ && (
+      {/* {c_relatedFAQ && (
         <section
           className="bg-white text-[#872533] py-16 px-4 md:px-0"
           aria-labelledby="faqs-heading"
@@ -543,7 +460,7 @@ const Location: Template<TemplateRenderProps> = ({ relativePrefixToRoot, path, d
             </div>
           </div>
         </section>
-      )}
+      )} */}
 
 
 
@@ -553,7 +470,7 @@ const Location: Template<TemplateRenderProps> = ({ relativePrefixToRoot, path, d
       <section className="bg-red-900 p-8 text-white">
 
         {/* <section className="bg-white py-16" aria-labelledby="offers-heading"> */}
-        <div className="mx-auto md:px-8 text-white">
+        {/* <div className="mx-auto md:px-8 text-white">
           <div className="mx-auto sm:text-center">
             <h2
               id="offers-heading"
@@ -610,35 +527,10 @@ const Location: Template<TemplateRenderProps> = ({ relativePrefixToRoot, path, d
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      {/* Footer */}
-      <footer className="bg-white py-8 flex justify-center" aria-label="Footer">
-        <img
-          src="https://a.mktgcdn.com/p/ypgvjC7ISg7xcQNu1iskxmdkLT12QTeeAFg99Ed_eG8/2880x1642.png"
-          alt="Footer with terms and conditions"
-          className="max-w-full h-full w-full"
-        />
-      </footer>
-    </>
+    </PageLayout>
   );
 };
 

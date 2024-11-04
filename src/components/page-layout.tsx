@@ -1,10 +1,9 @@
 
-import Site from "../types/Site";
 import Header from "./header";
 import Footer from "./footer";
 
 type Props = {
-  _site?: Site;
+  _site?: any;
   children?: React.ReactNode;
 };
 

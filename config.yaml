@@ -10,10 +10,12 @@ livePreviewConfiguration:
   setupCommand: "npm run dev -- --port 8080"
 siteStream:
   id: site-data
-  entityId: 5773050488036691466
+  entityId: "5773050488036691466"
   fields:
     - name
     - slug
+    - c_header
+    - c_footer
   localization:
     locales:
-      - en
+      - en_GB

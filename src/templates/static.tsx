@@ -84,7 +84,7 @@ const Static: Template<TemplateRenderProps> = ({ document }) => {
   return (
     <>
 
-      <h1 className="text-5xl">Static page</h1>
+      <h1 className="text-5xl">TEST-CP</h1>
 
 
     </>
