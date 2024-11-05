@@ -18,9 +18,10 @@ body {
 }
 
 .primaryCTA {
-  @apply text-white border border-white hover:bg-[#590008];
+  /* @apply text-white border border-white hover:bg-[#b36045]; */
+  @apply border border-[#590008] text-[#b36045] bg-[#ffffff] px-4 py-2 hover:bg-[#b36045] hover:text-white
 }
 
 .secondaryCTA {
-  @apply border border-[#590008] text-[#590008] px-4 py-2 hover:bg-[#590008] hover:text-white
+  @apply border border-[#590008] text-[#FFFFFF] px-4 py-2 hover:bg-[#b36045] hover:text-white
 }

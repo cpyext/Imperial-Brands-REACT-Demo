@@ -76,6 +76,13 @@ export const config: TemplateConfig = {
       // "c_relatedPromotions.c_category",
       // "c_relatedPromotions.c_primaryCTA",
       // "c_relatedPromotions.c_secondaryCTA",
+      // "c_relatedChar.name",
+      // "c_relatedChar.richTextDescriptionV2",
+      // "c_relatedChar.c_primaryCTA",
+      // "c_relatedChar.primaryPhoto",
+      // "c_relatedChar.id",
+
+
       "c_relatedFAQ.id",
       "c_relatedFAQ.question",
       "c_relatedFAQ.answerV2",
@@ -173,6 +180,7 @@ const Location: Template<TemplateRenderProps> = ({ relativePrefixToRoot, path, d
     // c_photo,
     //c_relatedServices,
     c_relatedFAQ,
+    // c_relatedChar,
   } = document;
 
 
@@ -185,36 +193,36 @@ const Location: Template<TemplateRenderProps> = ({ relativePrefixToRoot, path, d
 
 
       {/* Top Account Bar */}
-      <nav aria-label="Account" className="bg-[#590008] text-white p-2 px-4 hidden md:block">
-        <div className="w-full mx-auto flex justify justify-between space-x-4">
+      <nav aria-label="Account" className="bg-[#F0F0F0] text-white p-2 px-4 hidden md:block">
+        <div className="w-full mx-auto flex justify justify-between space-x-2">
           <a
-            href="https://www.jiffylube.com/locations/in/indianapolis/3328#"
-            className="text-xl font-semibold px-4 py-2 bg-[#862633] text-white rounded transition-colors duration-300 border-2 border-transparent"
-            style={{
-              '--hover-bg-color': '#FFFFFF',
-              '--hover-border-color': '#FF5733',
-              '--hover-text-color': '#862633'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = 'var(--hover-bg-color)';
-              e.currentTarget.style.borderColor = 'var(--hover-border-color)';
-              e.currentTarget.style.color = 'var(--hover-text-color)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = '#862633';
-              e.currentTarget.style.borderColor = '#852633';
-              e.currentTarget.style.color = '#FFFFFF';  // Reset to original text color
-            }}
+            href="https://www.pulze.com/es-IC/register"
+            className="text-xl font-semibold px-4 py-2 bg-[#b36045] text-white rounded transition-colors duration-300 border-2 border-transparent"
+            // style={{
+            //   '--hover-bg-color': '#FFFFFF',
+            //   '--hover-border-color': '#',
+            //   '--hover-text-color': '#'
+            // }}
+            // onMouseEnter={(e) => {
+            //   e.currentTarget.style.backgroundColor = 'var(--hover-bg-color)';
+            //   e.currentTarget.style.borderColor = 'var(--hover-border-color)';
+            //   e.currentTarget.style.color = 'var(--hover-text-color)';
+            // }}
+            // onMouseLeave={(e) => {
+            //   e.currentTarget.style.backgroundColor = '#862633';
+            //   e.currentTarget.style.borderColor = '#852633';
+            //   e.currentTarget.style.color = '#FFFFFF';  // Reset to original text color
+            // }}
           >
-            Sign in / Create Account
+            Create an Account
           </a>
 
           <a
-            href="https://www.jiffylube.com/vehicle/preferred-location"
-            className="text-xl font-semibold px-4 py-2 bg-[#862633] text-white rounded transition-colors duration-300 border-2 border-transparent"
+            href="https://www.pulze.com/es-IC/login"
+            className="text-xl font-semibold px-4 py-2 bg-[#b36045] text-white rounded transition-colors duration-300 border-2 border-transparent"
 
           >
-            Register a Vehicle
+            Login
           </a>
         </div>
       </nav>
@@ -224,7 +232,7 @@ const Location: Template<TemplateRenderProps> = ({ relativePrefixToRoot, path, d
 
       {/* Hero Section */}
       <section
-        className="relative bg-[#862633] text-white pb-12 md:pb-0"
+        className="relative bg-[#F0F0F0] text-[#00587c] pb-12 md:pb-0"
         aria-labelledby="hero-heading"
       >
         <div className="mx-auto flex flex-col-reverse md:flex-row-reverse items-center">
@@ -257,7 +265,7 @@ const Location: Template<TemplateRenderProps> = ({ relativePrefixToRoot, path, d
               <div className="mt-4 flex flex-col items-start gap-12 h-full justify-between">
 
 
-                <nav aria-label="Account" className="bg-[#862633] text-white">
+                <nav aria-label="Account" className="bg-[] text-white">
 
 
                   <div className="w-full md:container mx-auto flex flex-col md:flex-row  justify justify-between space-y-4 md:space-y-0 md:space-x-4">
@@ -321,46 +329,41 @@ const Location: Template<TemplateRenderProps> = ({ relativePrefixToRoot, path, d
 
 
       {/* Services Section */}
-      <section className="bg-[#872533] p-8 text-white">
+      <section className="bg-[#f0f0f0] p-8 text-white">
         {/* Title for the Services Section */}
-        <h3 className="text-center text-white text-3xl font-bold mb-8">With a Jiffy Lube Signature Service Oil Change our customers receive so much more:</h3>
+        <h3 className="text-center text-[#333333] text-3xl font-bold mb-8">Developed to make it easier to enjoy every moment of your day.</h3>
 
         {/* Container for all service cards */}
         <div className="flex flex-col lg:flex-row gap-4 px-4 md:px-16">
 
           {/* Oil Change Section */}
-          <div className="bg-yellow-500 flex flex-col items-center p-6 rounded-lg text-center  w-full md:w-1/4">
+          <div className="bg-white flex flex-col items-center p-6 rounded-lg text-center  w-full md:w-1/3">
             {/* <FaOilCan size={40} className="mb-4" /> */}
-            <img src="https://www.jiffylube.com/img/services/oil-change-icons.png" alt="Oil Change Icon" className="mb-4 w-10 h-10" />
-            <h3 className="text-2xl font-bold mb-2">OIL CHANGE</h3>
-            <ul className="text-gray-800 text-lg list-disc list-inside text-left">
-              <li>Oil with up to five quarts of quality motor oil</li>
-              <li>Oil filter</li>
+            <img src="https://www.pulze.com/assets/jry6u91upot6/1JfcIST676Mrf4dW3IjWXk/74f0370461f678e2999dd2f6d798aa3c/Arc2_Device2_Feature_1_final_Desktop.svg" alt="Oil Change Icon" className="mb-4 w-25 h-25" />
+            <h3 className="text-2xl text-[#00587c] font-bold mb-2">Enjoy without limits</h3>
+            <ul className="text-[#333333] text-lg  list-inside text-center">
+              <li>With over 25 sessions of use on a single charge and no additional charging devices required.</li>
+              {/* <li>Oil filter</li> */}
             </ul>
           </div>
-          <p className="oil-cards-symbol text-3xl text-white lg:hidden mt-2 mx-auto">+</p>
+          {/* <p className="oil-cards-symbol text-3xl text-white lg:hidden mt-2 mx-auto">+</p> */}
           {/* + Symbol (Desktop Only) */}
-          <p className="oil-cards-symbol  lg:flex items-center justify-center text-3xl text-white hidden ">+</p>
+          {/* <p className="oil-cards-symbol  lg:flex items-center justify-center text-3xl text-white hidden ">+</p> */}
 
 
           {/* Inspect Key Components Section */}
-          <div className="bg-white flex flex-col items-center p-6 rounded-lg text-center text-gray-800  w-full lg:w-1/4">
+          <div className="bg-white flex flex-col items-center p-6 rounded-lg text-center text-gray-800  w-full lg:w-1/3">
             {/* <FaCarBattery size={40} className="text-red-900 mb-4" /> */}
-            <img src="https://www.jiffylube.com/img/services/oil-change-inspect-key-components.png" alt="Oil Change Icon" className="mb-4 w-10 h-10" />
-            <h3 className="text-2xl font-bold text-red-900 mb-2">INSPECT KEY COMPONENTS</h3>
+            <img src="https://www.pulze.com/assets/jry6u91upot6/33UkKkAIolmhnsknEjaAIc/9d5434b3103c2d1e20a512eeccb0848f/Arc2_Device2_Feature_2_final_Desktop_Updated.svg" alt="Oil Change Icon" className="mb-4 w-25 h-25" />
+            <h3 className="text-2xl text-[#00587c] font-bold mb-2">Choose the intensity according to the moment </h3>
             {/* <ul className="text-lg"> */}
-            <ul className="text-gray-800 text-lg list-disc list-inside text-left">
-              <li>Antifreeze/coolant reservoir levels</li>
-              <li>Engine air filtration system</li>
-              <li>Brake fluid level (in transparent reservoirs)</li>
-              <li>Wiper blades</li>
-              <li>Exterior lights</li>
-              <li>Chassis (lubricate when applicable)</li>
+            <ul className="text-[#333333] text-lg  list-inside text-center">
+              <li>Two intensity modes depending on your needs: Intense or Gentle</li>
             </ul>
           </div>
-          <p className="oil-cards-symbol text-3xl text-white lg:hidden mt-2 mx-auto">+</p>
-          {/* + Symbol (Desktop Only) */}
-          <p className="oil-cards-symbol lg:flex items-center justify-center text-3xl text-white hidden lg:block">+</p>
+          {/* <p className="oil-cards-symbol text-3xl text-white lg:hidden mt-2 mx-auto">+</p>
+      
+         
 
 
 
@@ -369,42 +372,28 @@ const Location: Template<TemplateRenderProps> = ({ relativePrefixToRoot, path, d
 
 
           {/* Check and Fill Section */}
-          <div className=" w-full bg-white flex flex-col items-center p-6 rounded-lg text-center text-gray-800 lg:w-1/4">
+          <div className=" w-full bg-white flex flex-col items-center p-6 rounded-lg text-center text-gray-800 lg:w-1/3">
             {/* <FaCheckCircle size={40} className="text-red-900 mb-4" /> */}
-            <img src="https://www.jiffylube.com/img/services/oil-change-check-fill.png" alt="Oil Change Icon" className="mb-4 w-10 h-10" />
-            <h3 className="text-2xl font-bold text-red-900 mb-2">CHECK AND FILL</h3>
-            <ul className="text-gray-800 text-lg list-disc list-inside text-left">
-              <li>Tire pressures</li>
-              <li>Transmission/transaxle fluid</li>
-              <li>Differential/transfer case fluid</li>
-              <li>Power steering fluid</li>
-              <li>Windshield washer fluid</li>
-              <li>Battery water (excluding sealed batteries)</li>
+            <img src="https://www.pulze.com/assets/jry6u91upot6/6HGEuSzgO9XLNESLxCfbb0/6de9165b90f73bd3e51e61d3bd59e709/Arc2_Device2_Feature_3_final_Desktop.svg" alt="Oil Change Icon" className="mb-4 w-25 h-25" />
+            <h3 className="text-2xl  text-[#00587c] font-bold mb-2">Always carry it with you</h3>
+            <ul className="text-[#333333] text-lg  list-inside text-center">
+              <li>Small and compact device that fits in your pocket.</li>
             </ul>
           </div>
           <p className="oil-cards-symbol text-3xl text-white lg:hidden mt-2 mx-auto">+</p>
           <p className="oil-cards-symbol lg:flex items-center justify-center text-3xl text-white hidden lg:block">+</p>
 
 
-          <div className="bg-white flex flex-col items-center p-6 rounded-lg text-center text-gray-800 w-full lg:w-1/4">
-            {/* <FaBroom size={40} className="text-red-900 mb-4" /> */}
-            <img src="https://www.jiffylube.com/img/services/oil-change-clean.png" alt="Oil Change Icon" className="mb-4 w-10 h-10" />
-            <h3 className="text-2xl font-bold text-red-900 mb-2">CLEAN</h3>
-            <ul className="text-gray-800 text-lg list-disc list-inside text-left">
-              <li>Exterior windows</li>
-              <li>Vacuum interior floors</li>
-            </ul>
-          </div>
 
         </div>
-        <nav aria-label="Account" className="bg-[#862633] text-white mt-8">
+        <nav aria-label="Account" className="text-white mt-8">
           <div className="w-full md:container mx-auto flex justify justify-center space-x-4">
             <a
-              href="https://www.jiffylube.com/contact"
-              className="primaryCTA text-xl font-semibold px-4 py-2 bg-[#862633] text-white rounded transition-colors duration-300 border-2 border-transparent"
+              href="https://www.pulze.com/es-IC/pulze2.0/device"
+              className="primaryCTA text-xl font-semibold px-4 py-2 bg-[#b36045] text-white rounded transition-colors duration-300 border-2 border-transparent"
 
             >
-              Make Appointment
+              Learn More
             </a>
 
           </div>
@@ -415,7 +404,7 @@ const Location: Template<TemplateRenderProps> = ({ relativePrefixToRoot, path, d
       {/* FAQs Section */}
       {c_relatedFAQ && (
         <section
-          className="bg-white text-[#646464] py-16 px-4 md:px-0"
+          className="bg-white text-[#646464] py-16 px-4 md:px-0 text-s"
           aria-labelledby="faqs-heading"
         >
           <div className="mx-auto md:px-8">
