@@ -76,10 +76,10 @@ export const config: TemplateConfig = {
       // "c_relatedPromotions.c_category",
       // "c_relatedPromotions.c_primaryCTA",
       // "c_relatedPromotions.c_secondaryCTA",
-      // "c_relatedFAQ.id",
-      // "c_relatedFAQ.question",
-      // "c_relatedFAQ.answerV2",
-      // "c_relatedFAQ.c_primaryCTA",
+      "c_relatedFAQ.id",
+      "c_relatedFAQ.question",
+      "c_relatedFAQ.answerV2",
+      "c_relatedFAQ.c_primaryCTA",
 
       // "c_ourServices",
     ],
@@ -172,7 +172,7 @@ const Location: Template<TemplateRenderProps> = ({ relativePrefixToRoot, path, d
     photoGallery, primaryPhoto,
     // c_photo,
     //c_relatedServices,
-    // c_relatedFAQ,
+    c_relatedFAQ,
   } = document;
 
 
@@ -413,9 +413,9 @@ const Location: Template<TemplateRenderProps> = ({ relativePrefixToRoot, path, d
 
 
       {/* FAQs Section */}
-      {/* {c_relatedFAQ && (
+      {c_relatedFAQ && (
         <section
-          className="bg-white text-[#872533] py-16 px-4 md:px-0"
+          className="bg-white text-[#646464] py-16 px-4 md:px-0"
           aria-labelledby="faqs-heading"
         >
           <div className="mx-auto md:px-8">
@@ -460,7 +460,7 @@ const Location: Template<TemplateRenderProps> = ({ relativePrefixToRoot, path, d
             </div>
           </div>
         </section>
-      )} */}
+      )}
 
 
 
