@@ -302,7 +302,7 @@ const Location: Template<TemplateRenderProps> = ({ relativePrefixToRoot, path, d
 
       {/* Welcome Section */}
       <section className="bg-[white] p-8 text-black">
-        <div className="mx-auto md:p-12 gap-4 md:gap-28 flex flex-col md:flex-row justify-between w-full text-[#872533] py-16"
+        <div className="mx-auto md:p-12 gap-4 md:gap-28 flex flex-col md:flex-row justify-between w-full text-[#000000] py-16"
           aria-labelledby="welcome-heading"
         >
           <div className="w-full md:w-1/2">
@@ -456,7 +456,7 @@ const Location: Template<TemplateRenderProps> = ({ relativePrefixToRoot, path, d
 
 
       {/* Promotions Offers Section */}
-      <section className="bg-red-900 p-8 text-white">
+      <section className="p-8 text-white">
 
         {/* <section className="bg-white py-16" aria-labelledby="offers-heading"> */}
         {/* <div className="mx-auto md:px-8 text-white">
